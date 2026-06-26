@@ -10,6 +10,7 @@ API REST desenvolvida em Java com Spring Boot para gerenciamento de uma bibliote
 - Spring Data JPA
 - Bean Validation
 - PostgreSQL
+- H2 para execucao local sem Docker
 - Maven Wrapper
 - Docker Compose
 - Lombok
@@ -28,6 +29,42 @@ API REST desenvolvida em Java com Spring Boot para gerenciamento de uma bibliote
 - Documentacao Swagger.
 
 ## Como rodar
+
+### Sem Docker
+
+Use o perfil `local`, que sobe a API com banco H2 em memoria:
+
+```bash
+.\mvnw.cmd spring-boot:run -Dspring-boot.run.profiles=local
+```
+
+A API ficara disponivel em:
+
+```text
+http://localhost:8080
+```
+
+A documentacao Swagger ficara em:
+
+```text
+http://localhost:8080/swagger-ui.html
+```
+
+O console do H2 ficara em:
+
+```text
+http://localhost:8080/h2-console
+```
+
+Use estes dados no console do H2:
+
+```text
+JDBC URL: jdbc:h2:mem:biblioteca_db
+User: sa
+Password: deixe em branco
+```
+
+### Com Docker e PostgreSQL
 
 Suba o PostgreSQL:
 
