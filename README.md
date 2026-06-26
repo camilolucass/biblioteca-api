@@ -131,20 +131,5 @@ Exemplo de emprestimo:
 - Nao e possivel excluir um livro emprestado.
 - Emprestimos ativos com data prevista anterior a data atual sao tratados como `ATRASADO` nas respostas.
 
-## Testes
 
-Execute:
 
-```bash
-.\mvnw.cmd test
-```
-
-Os testes unitarios cobrem as principais regras de emprestimo, devolucao e ISBN duplicado.
-
-## Melhorias futuras
-
-- Adicionar autenticacao.
-- Criar filtros de busca por autor, categoria e status.
-- Adicionar paginacao.
-- Criar migracoes com Flyway ou Liquibase.
-- Criar testes de integracao com Testcontainers.
